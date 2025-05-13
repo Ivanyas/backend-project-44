@@ -12,7 +12,6 @@ export default function playGame(gameRules, generateGameData) {
     const correctAnswer = gameData[1];
 
     console.log(`Question: ${question}`);
-    console.log(`answer >>> ${correctAnswer}`);
     const answer = readlineSync.question('Your answer: ');
 
     if (answer !== String(correctAnswer)) {
@@ -24,4 +23,4 @@ export default function playGame(gameRules, generateGameData) {
   }
 
   return (console.log(`Congratulations, ${name}!`));
-}
+};
