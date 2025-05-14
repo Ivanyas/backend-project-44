@@ -1,5 +1,5 @@
-import playGame from '../index.js';
-import getRandomInt from '../utils/get-random-int.js';
+import startGame from '../index.js';
+import getRandomNum from '../utils/get-random-num.js';
 
 function getCorrectAnswer(question) {
   const result = question % 2 === 0 ? 'yes' : 'no';
@@ -8,12 +8,12 @@ function getCorrectAnswer(question) {
 }
 
 function generateGameData() {
-  const question = getRandomInt(0, 101);
+  const question = getRandomNum(0, 100);
   const correctAnswer = getCorrectAnswer(question);
 
   return [question, correctAnswer];
 }
 
 export default function getEven() {
-  playGame('Answer "yes" if the number is even, otherwise answer "no".', generateGameData);
+  startGame('Answer "yes" if the number is even, otherwise answer "no".', generateGameData);
 }

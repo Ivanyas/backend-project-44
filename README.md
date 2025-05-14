@@ -3,4 +3,7 @@
 
 ## Демонстрация игрового процесса
 https://asciinema.org/a/HvqPPbkC17uIGpzeC85xG9k1A
+
 https://asciinema.org/a/7IQsnhS4sCmKJRWkofGb0trIe
+
+ https://asciinema.org/a/rfGxYWfzTxknylp22RzBAtqlf
