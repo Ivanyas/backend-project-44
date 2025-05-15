@@ -23,4 +23,4 @@ export default function startGame(gameRules, generateGameData) {
   }
 
   return (console.log(`Congratulations, ${name}!`));
-};
+}
