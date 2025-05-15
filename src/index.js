@@ -16,11 +16,11 @@ export default function startGame(gameRules, generateGameData) {
 
     if (answer !== String(correctAnswer)) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      return (console.log(`Let's try again, ${name}!`));
+      return console.log(`Let's try again, ${name}!`);
     }
 
     console.log('Correct!');
   }
 
-  return (console.log(`Congratulations, ${name}!`));
+  return console.log(`Congratulations, ${name}!`);
 }

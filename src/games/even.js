@@ -3,14 +3,12 @@ import getRandomNum from '../utils/get-random-num.js';
 
 function getCorrectAnswer(question) {
   const result = question % 2 === 0 ? 'yes' : 'no';
-
   return result;
 }
 
 function generateGameData() {
   const question = getRandomNum(0, 100);
   const correctAnswer = getCorrectAnswer(question);
-
   return [question, correctAnswer];
 }
 
