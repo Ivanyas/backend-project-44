@@ -1,34 +1,28 @@
-import stylistic from '@stylistic/eslint-plugin';
-import airbnbBase from 'eslint-config-airbnb-base';
-import pluginImport from 'eslint-plugin-import';
-
-// Convert the Airbnb config to flat format
-const airbnbRules = {
-  ...airbnbBase.rules,
-  // Customize or override any rules here
-};
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import tseslint from 'typescript-eslint'
+import stylistic from '@stylistic/eslint-plugin'
+// import { Linter } from 'eslint'
 
 export default [
+  stylistic.configs.recommended,
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ['**/*.{js,mjs}'],
+    files: [
+      '**/*.{js,ts,tsx}',
+    ],
+  },
+  {
+    ignores: ['dist/'],
+  },
+  {
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-    },
-    plugins: {
-      import: pluginImport,
-      '@stylistic': stylistic,
+      globals: globals.node,
     },
     rules: {
-      ...airbnbRules,
-      // Additional Stylistic rules
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/quotes': ['error', 'single'],
-      '@stylistic/semi': ['error', 'always'],
-      '@stylistic/comma-dangle': ['error', 'always-multiline'],
-      '@stylistic/object-curly-spacing': ['error', 'always'],
-      '@stylistic/arrow-parens': ['error', 'always'],
-      '@stylistic/max-len': ['error', { code: 100 }],
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@stylistic/semi': ['error', 'never'],
     },
   },
-];
+] // satisfies Linter.Config[]
